@@ -1,0 +1,12 @@
+@use "../../functions/functions";
+@use "../../mixins/mixins";
+@use "../../variables/variables";
+
+.container {
+  padding-inline: variables.$padding + px;
+
+  @media (min-width: #{768 + 0.1px}) {
+    max-inline-size: functions.responsive-value(1500, 645, 1920, 780, "fixed-start-value", "px");
+    margin-inline: auto;
+  }
+}
