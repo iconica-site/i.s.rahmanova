@@ -3,6 +3,8 @@
 @use "../../variables/variables";
 
 .up {
+  --outline-color: #{variables.$color-secondary};
+
   position: fixed;
   inset-block-end: #{variables.$padding + px};
   inset-inline-end: #{variables.$padding + px};

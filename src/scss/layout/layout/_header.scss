@@ -215,6 +215,8 @@
 
   // .header-nav__button
   &__button {
+    --outline-color: #{variables.$color-secondary};
+
     display: flex;
     justify-content: center;
     align-items: center;
