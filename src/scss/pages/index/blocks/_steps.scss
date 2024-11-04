@@ -1,0 +1,160 @@
+@use "../../../functions/functions";
+@use "../../../mixins/mixins";
+@use "../../../variables/variables";
+
+.steps {
+  padding-block: functions.responsive-value(79, 14) functions.responsive-value(133, 48);
+
+  @media (min-width: #{768 + 0.1px}) {
+    padding-block: functions.responsive-value(79, 32, 1920, 780, "fixed-start-value", "px")
+      functions.responsive-value(133, 54, 1920, 780, "fixed-start-value", "px");
+  }
+
+  // .steps__container
+  &__container {
+  }
+
+  // .steps__header
+  &__header {
+    margin-block-end: functions.responsive-value(126, 34);
+
+    @media (min-width: #{768 + 0.1px}) {
+      margin-block-end: functions.responsive-value(126, 50, 1920, 780, "fixed-start-value", "px");
+    }
+
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+
+    > *:last-child {
+      margin-block-end: 0;
+    }
+  }
+
+  // .steps__caption
+  &__caption {
+    @media (min-width: #{768 + 0.1px}) {
+      margin-block-end: functions.responsive-value(24, 10, 1920, 780, "fixed-start-value", "px");
+    }
+  }
+
+  // .steps__title
+  &__title {
+  }
+
+  // .steps__items
+  &__items {
+    @media (max-width: 768px) {
+      margin-inline: -30px;
+    }
+  }
+}
+
+.steps-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: functions.responsive-value(9, 3);
+  scrollbar-width: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  @media (min-width: #{768 + 0.1px}) {
+    gap: functions.responsive-value(9, 3, 1920, 780, "fixed-start-value", "px");
+  }
+
+  @media (max-width: 768px) {
+    padding-inline: 30px;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  // .steps-items__item
+  &__item {
+    &:not(:last-child) {
+      display: flex;
+      align-items: center;
+      gap: functions.responsive-value(9, 3);
+      flex: 1 1 auto;
+
+      @media (min-width: #{768 + 0.1px}) {
+        gap: functions.responsive-value(9, 3, 1920, 780, "fixed-start-value", "px");
+      }
+
+      &::after {
+        content: "";
+        flex: 1 1 auto;
+        aspect-ratio: 116 / 7;
+        font-size: 0;
+        background-color: variables.$color-secondary;
+        mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 116 7'%3E%3Cpath fill='%23996649' d='M115.08 3.56 112.46.94l-2.61 2.62 2.61 2.61 2.62-2.61ZM.18 4h112.28v-.9H.17V4Z'/%3E%3C/svg%3E%0A");
+        mask-size: 100% 100%;
+        mask-repeat: no-repeat;
+        mask-position: center;
+
+        @media (max-width: 768px) {
+          min-inline-size: functions.responsive-value(113, 46);
+        }
+      }
+    }
+  }
+
+  // .steps-items__inner
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: functions.responsive-value(5, 2);
+    flex: 0 0 auto;
+    inline-size: functions.responsive-value(181, 74);
+    aspect-ratio: 1 / 1;
+    padding-block: functions.responsive-value(27, 11);
+    padding-inline: 5px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid variables.$color-secondary;
+
+    @media (min-width: #{768 + 0.1px}) {
+      gap: functions.responsive-value(5, 2, 1920, 780, "fixed-start-value", "px");
+      inline-size: functions.responsive-value(181, 73, 1920, 780, "fixed-start-value", "px");
+      padding-block: functions.responsive-value(27, 10, 1920, 780, "fixed-start-value", "px");
+    }
+  }
+
+  // .steps-items__icon
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    inline-size: functions.responsive-value(34, 14);
+    aspect-ratio: 1 / 1;
+    font-size: 0;
+    color: variables.$color-accent;
+
+    @media (min-width: #{768 + 0.1px}) {
+      inline-size: functions.responsive-value(34, 14, 1920, 780, "fixed-start-value", "px");
+    }
+
+    svg {
+      width: calc(var(--steps-item-icon-width) / 34 * 100%);
+      height: calc(var(--steps-item-icon-height) / 34 * 100%);
+    }
+  }
+
+  // .steps-items__text
+  &__text {
+    font-family: variables.$font-playfair-display;
+    font-weight: 500;
+    font-size: functions.responsive-value(20, 8);
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    color: variables.$color-accent;
+
+    @media (min-width: #{768 + 0.1px}) {
+      font-size: functions.responsive-value(20, 8, 1920, 780, "fixed-start-value", "px");
+    }
+  }
+}

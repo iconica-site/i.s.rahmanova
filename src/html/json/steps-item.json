@@ -1,0 +1,32 @@
+[
+  {
+    "icon-width": 28,
+    "icon-height": 28,
+    "icon": "icon-call",
+    "text": "Консультация по телефону"
+  },
+  {
+    "icon-width": 34,
+    "icon-height": 34,
+    "icon": "icon-note",
+    "text": "Ознакомление с документами"
+  },
+  {
+    "icon-width": 34,
+    "icon-height": 34,
+    "icon": "icon-task",
+    "text": "Предложение вариантов"
+  },
+  {
+    "icon-width": 34,
+    "icon-height": 34,
+    "icon": "icon-bookmark",
+    "text": "Составление документации"
+  },
+  {
+    "icon-width": 34,
+    "icon-height": 34,
+    "icon": "icon-case",
+    "text": "Сопровождение клиента"
+  }
+]
