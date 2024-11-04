@@ -141,6 +141,7 @@
     position: relative;
     z-index: -1;
     aspect-ratio: 331 / 412;
+    font-size: 0;
 
     @media (min-width: #{768 + 0.1px}) {
       position: absolute;
@@ -152,6 +153,7 @@
 
     @media (max-width: 768px) {
       margin-block-start: 5px;
+      flex: 0 0 auto;
     }
 
     img {
@@ -302,6 +304,7 @@
       content: "";
       inline-size: functions.responsive-value(26, 9);
       aspect-ratio: 26.02 / 16.48;
+      font-size: 0;
       background-color: rgba($color: variables.$color-black, $alpha: 0.7);
       mask-size: 100% 100%;
       mask-repeat: no-repeat;

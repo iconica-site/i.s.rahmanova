@@ -1,0 +1,247 @@
+@use "../../functions/functions";
+@use "../../mixins/mixins";
+@use "../../variables/variables";
+
+.consultation {
+  padding: 10px;
+
+  @media (min-width: #{500 + 0.1px}) {
+    padding: 30px;
+  }
+
+  // .consultation__inner
+  &__inner {
+    position: relative;
+    inline-size: 100%;
+    max-inline-size: 1197px;
+    margin: auto;
+    background-color: rgba($color: variables.$color-white, $alpha: 0.78);
+    border-radius: 20px;
+
+    @media (min-width: #{1280 + 0.1px}) {
+      display: grid;
+      grid-template-columns: calc(493 / 1197 * 1fr) calc(704 / 1197 * 1fr);
+    }
+
+    @media (max-width: 1280px) {
+      padding: 50px;
+    }
+
+    @media (max-width: 768px) {
+      padding-block: 149px 107px;
+    }
+
+    @media (max-width: 500px) {
+      padding-block: 30px;
+      padding-inline: 20px;
+    }
+  }
+
+  // .consultation__close
+  &__close {
+    position: absolute;
+    inset-block-start: 10px;
+    inset-inline-end: 10px;
+    z-index: 1;
+    font-size: 0;
+    color: variables.$color-black;
+
+    @include mixins.prefers-reduced-motion {
+      transition-property: color;
+      transition-duration: 0.3s;
+    }
+
+    @include mixins.hover {
+      color: variables.$color-accent;
+    }
+
+    @media (min-width: #{500 + 0.1px}) {
+      inset-block-start: 38px;
+      inset-inline-end: 38px;
+    }
+
+    @media (min-width: #{768 + 0.1px}) {
+      inset-block-start: 14px;
+      inset-inline-end: 14px;
+    }
+  }
+
+  // .consultation__image
+  &__image {
+    font-size: 0;
+
+    @media (max-width: 1280px) {
+      display: none;
+    }
+
+    img {
+      object-fit: contain;
+      object-position: 50% 100%;
+    }
+  }
+
+  // .consultation__content
+  &__content {
+    > *:last-child {
+      margin-block-end: 0;
+    }
+
+    @media (min-width: #{1280 + 0.1px}) {
+      padding-block: 65px 22px;
+      padding-inline: 54px;
+    }
+  }
+
+  // .consultation__header
+  &__header {
+    margin-block-end: 27px;
+    font-family: variables.$font-playfair-display;
+    font-weight: 500;
+    color: variables.$color-primary;
+
+    @media (min-width: #{768 + 0.1px}) {
+      margin-block-end: 17px;
+    }
+  }
+
+  // .consultation__title
+  &__title {
+    font-size: 24px;
+    letter-spacing: -0.05em;
+
+    // .consultation__title--desktop
+    &--desktop {
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    // .consultation__title--mobile
+    &--mobile {
+      @media (min-width: #{768 + 0.1px}) {
+        display: none;
+      }
+    }
+
+    @media (min-width: #{768 + 0.1px}) {
+      font-size: 46px;
+      letter-spacing: -0.03em;
+    }
+  }
+
+  // .consultation__caption
+  &__caption {
+    margin-block-start: 7px;
+    font-size: 20px;
+    letter-spacing: -0.05em;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  // .consultation__form
+  &__form {
+    margin-block-end: 43px;
+
+    @media (min-width: #{768 + 0.1px}) {
+      margin-block-end: 51px;
+    }
+  }
+
+  // .consultation__text
+  &__text {
+    font-family: variables.$font-montserrat;
+    font-size: 12px;
+    letter-spacing: -0.08em;
+    color: variables.$color-black;
+  }
+}
+
+.consultation-form {
+  max-inline-size: 530px;
+
+  > *:last-child {
+    margin-block-end: 0;
+  }
+
+  // .consultation-form__inputs
+  &__inputs {
+    margin-block-end: 38px;
+
+    @media (min-width: #{768 + 0.1px}) {
+      margin-block-end: 41px;
+    }
+  }
+
+  // .consultation-form__button
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-block-size: 63px;
+    margin-inline: auto;
+    padding-block: 5px;
+    padding-inline: 16px;
+    font-size: 24px;
+    line-height: 1;
+    text-transform: capitalize;
+    text-align: center;
+    color: variables.$color-primary;
+    border: 2px solid variables.$color-accent;
+
+    @include mixins.prefers-reduced-motion {
+      transition-property: color, background-color;
+      transition-duration: 0.3s;
+    }
+
+    @include mixins.hover {
+      color: variables.$color-white;
+      background-color: variables.$color-accent;
+    }
+  }
+}
+
+.consultation-inputs {
+  // .consultation-inputs__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 6px;
+    font-size: 14px;
+
+    &:not(:last-child) {
+      margin-block-end: 15px;
+    }
+  }
+
+  // .consultation-inputs__label
+  &__label {
+    letter-spacing: 0.08em;
+    color: variables.$color-primary;
+  }
+
+  // .consultation-inputs__input
+  &__input {
+    block-size: 53px;
+    padding-inline: 14px;
+    line-height: 1;
+    background-color: variables.$color-white;
+    border: 1px solid variables.$color-input;
+    border-radius: 11px;
+
+    @include mixins.prefers-reduced-motion {
+      transition-property: border-color;
+      transition-duration: 0.3s;
+    }
+
+    &:focus {
+      border-color: variables.$color-accent;
+    }
+
+    &::placeholder {
+      color: variables.$color-input;
+    }
+  }
+}
