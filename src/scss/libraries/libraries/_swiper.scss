@@ -24,5 +24,10 @@
 // @use "../../../../node_modules/swiper/modules/zoom";
 
 .swiper {
+  margin-inline: 0;
   user-select: none;
+}
+
+.swiper-slide {
+  block-size: auto;
 }
