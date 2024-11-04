@@ -1,0 +1,17 @@
+@use "../../functions/functions";
+@use "../../mixins/mixins";
+@use "../../variables/variables";
+
+.h2 {
+  font-family: variables.$font-playfair-display;
+  font-weight: 500;
+  font-size: functions.responsive-value(56, 33);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: variables.$color-primary;
+
+  @media (min-width: #{768 + 0.1px}) {
+    font-size: functions.responsive-value(56, 22, 1920, 780, "fixed-start-value", "px");
+    letter-spacing: -0.02em;
+  }
+}

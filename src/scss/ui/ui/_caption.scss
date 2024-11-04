@@ -1,0 +1,16 @@
+@use "../../functions/functions";
+@use "../../mixins/mixins";
+@use "../../variables/variables";
+
+.caption {
+  font-size: functions.responsive-value(20, 15);
+  line-height: 1;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: variables.$color-accent;
+
+  @media (min-width: #{768 + 0.1px}) {
+    font-size: functions.responsive-value(20, 8, 1920, 780, "fixed-start-value", "px");
+    letter-spacing: 0.05em;
+  }
+}

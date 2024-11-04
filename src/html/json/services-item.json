@@ -1,0 +1,72 @@
+[
+  {
+    "icon-width": 45,
+    "icon-height": 63,
+    "icon": "icon-book",
+    "text": "Расторжение<br>брака в судебном<br>порядке",
+    "order": 1
+  },
+  {
+    "icon-width": 54,
+    "icon-height": 63,
+    "icon": "icon-letter",
+    "text": "Раздел<br>имущества<br>супругов в суде",
+    "order": 2
+  },
+  {
+    "icon-width": 57,
+    "icon-height": 63,
+    "icon": "icon-document",
+    "text": "Раздел бизнеса<br>супругов после<br>развода",
+    "order": 5
+  },
+  {
+    "icon-width": 57,
+    "icon-height": 62,
+    "icon": "icon-folder",
+    "text": "Раздел долгов<br>супругов",
+    "order": 6
+  },
+  {
+    "icon-width": 45,
+    "icon-height": 63,
+    "icon": "icon-book",
+    "text": "Брачные<br>договоры",
+    "order": 9
+  },
+  {
+    "icon-width": 45,
+    "icon-height": 63,
+    "icon": "icon-book",
+    "text": "Расторжение<br>брака с<br>иностранным<br>гражданином",
+    "order": 3
+  },
+  {
+    "icon-width": 54,
+    "icon-height": 63,
+    "icon": "icon-letter",
+    "text": "Определение<br>порядка общения с<br>ребенком после<br>разводам",
+    "order": 4
+  },
+  {
+    "icon-width": 57,
+    "icon-height": 63,
+    "icon": "icon-document",
+    "text": "Определение места<br>жительства ребенка<br>после развода",
+    "order": 7
+  },
+  {
+    "icon-width": 57,
+    "icon-height": 63,
+    "icon": "icon-folder",
+    "text": "Увеличение или<br>уменьшение<br>алиментов",
+    "order": 8
+  },
+  {
+    "icon-width": 45,
+    "icon-height": 63,
+    "icon": "icon-book",
+    "text": "Взыскание<br>алиментов",
+    "order": 10
+  }
+]

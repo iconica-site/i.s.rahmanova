@@ -1,0 +1,15 @@
+<section class="services" id="section-services" aria-labelledby="title-services">
+  <div class="services__container container">
+    <div class="services__header">
+      <h2 class="services__caption caption" id="title-services">Услуги</h2>
+      <p class="services__title h2">Что вы получите от адвоката</p>
+      <blockquote class="services__quote">
+        <p class="services__text">С начала карьеры отдала предпочтение специализации - защита прав детей.</p>
+      </blockquote>
+    </div>
+    <ul class="services__items services-items">
+      @@loop("ui/services-item.html", "json/services-item.json")
+    </ul>
+    <button class="services__button" data-dialog-id="dialog-consultation">Записаться на консультацию</button>
+  </div>
+</section>
