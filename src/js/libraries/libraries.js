@@ -1,1 +1,2 @@
-// import "./swiper/swiper.js";
+import "./swiper/swiper.js";
+import "./fslightbox/fslightbox.js";
