@@ -1,0 +1,30 @@
+<section class="blog" id="section-blog" aria-labelledby="title-blog">
+  <div class="blog__container container">
+    <div class="blog__inner">
+      <h2 class="blog__title h2" id="title-blog">Популярные статьи</h2>
+      <div class="blog__slider blog-slider swiper">
+        <div class="blog-slider__wrapper swiper-wrapper">
+          @@loop("ui/blog-slide.html", "json/blog-slide.json")
+        </div>
+      </div>
+      <section class="blog__video blog-video">
+        <h3 class="blog-video__caption">Подкаст<br>о нашей работе</h3>
+        <div class="blog-video__media">
+          <div class="blog-video__item ibg">
+            <video src="" poster="@img/images/ui/placeholder/1.svg"></video>
+          </div>
+          <button class="blog-video__button" aria-label="#">
+            <svg width="53" height="53" aria-hidden="true">
+              <use xlink:href="#icon-video"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="blog-video__content blog-content">
+          <h4 class="blog-video__title blog-title">Название подкаста</h4>
+          <p class="blog-video__text blog-text">Адвокат знает особенности ведения судебного процесса</p>
+          <a class="blog-video__link blog-link" href="#">Подробнее</a>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>

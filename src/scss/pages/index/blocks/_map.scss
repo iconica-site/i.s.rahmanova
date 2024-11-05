@@ -10,6 +10,7 @@
   &__item {
     aspect-ratio: 393 / 396;
     font-size: 0;
+    background-color: variables.$color-image-background;
 
     @media (min-width: #{768 + 0.1px}) {
       aspect-ratio: 1921 / 821;
