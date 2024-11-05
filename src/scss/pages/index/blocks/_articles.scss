@@ -1,0 +1,101 @@
+@use "../../../functions/functions";
+@use "../../../mixins/mixins";
+@use "../../../variables/variables";
+
+.articles {
+  padding-block: functions.responsive-value(64, 12) functions.responsive-value(64, 48);
+
+  @media (min-width: #{768 + 0.1px}) {
+    padding-block: functions.responsive-value(64, 26, 1920, 780, "fixed-start-value", "px");
+  }
+
+  // .articles__container
+  &__container {
+    > *:last-child {
+      margin-block-end: 0;
+    }
+  }
+
+  // .articles__list
+  &__list {
+    margin-block-end: 42px;
+
+    @media (min-width: #{768 + 0.1px}) {
+      margin-block-end: functions.responsive-value(44, 17, 1920, 780, "fixed-start-value", "px");
+    }
+
+    article {
+      &:not(:last-child) {
+        margin-block-end: functions.responsive-value(57, 33);
+
+        @media (min-width: #{768 + 0.1px}) {
+          margin-block-end: functions.responsive-value(57, 23, 1920, 780, "fixed-start-value", "px");
+        }
+      }
+    }
+
+    h3 {
+      margin-block-end: functions.responsive-value(65, 35);
+      font-family: variables.$font-playfair-display;
+      font-weight: 500;
+      font-size: functions.responsive-value(56, 33);
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      color: variables.$color-primary;
+
+      @media (min-width: #{768 + 0.1px}) {
+        margin-block-end: functions.responsive-value(65, 26, 1920, 780, "fixed-start-value", "px");
+        font-size: functions.responsive-value(56, 22, 1920, 780, "fixed-start-value", "px");
+        letter-spacing: -0.02em;
+      }
+
+      @media (max-width: 768px) {
+        text-align: center;
+      }
+    }
+
+    div {
+      p {
+        &:not(:last-child) {
+          margin-block-end: 1em;
+        }
+      }
+    }
+  }
+
+  // .articles__button
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-block-size: functions.responsive-value(66, 37);
+    padding-block: 5px;
+    padding-inline: 25px;
+    font-size: functions.responsive-value(21, 7);
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: center;
+    color: variables.$color-primary;
+    border: 1px solid variables.$color-secondary;
+
+    @include mixins.prefers-reduced-motion {
+      transition-property: color, background-color;
+      transition-duration: 0.3s;
+    }
+
+    @include mixins.hover {
+      color: variables.$color-white;
+      background-color: variables.$color-secondary;
+    }
+
+    @media (min-width: #{768 + 0.1px}) {
+      min-block-size: functions.responsive-value(66, 26, 1920, 780, "fixed-start-value", "px");
+      padding-inline: functions.responsive-value(25, 10, 1920, 780, "fixed-start-value", "px");
+      font-size: functions.responsive-value(21, 8, 1920, 780, "fixed-start-value", "px");
+    }
+
+    @media (max-width: 768px) {
+      inline-size: 100%;
+    }
+  }
+}
