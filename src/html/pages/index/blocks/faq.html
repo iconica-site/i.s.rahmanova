@@ -1,0 +1,22 @@
+<section class="faq" id="section-faq" aria-labelledby="title-faq">
+  <div class="faq__container container">
+    <div class="faq__inner">
+      <div class="faq__side">
+        <div class="faq__header">
+          <div class="faq__caption caption">ЧаВО</div>
+          <h2 class="faq__title h2" id="title-faq">Часто задаваемые<br>вопросы</h2>
+          <blockquote class="faq__quote">
+            <p class="faq__text">С начала карьеры отдала предпочтение специализации - защита прав детей.</p>
+          </blockquote>
+        </div>
+        <a class="faq__button faq-button" href="#">
+          <span class="faq-button__text faq-button__text--desktop">Ask More Question</span>
+          <span class="faq-button__text faq-button__text--mobile">Задать свой вопрос</span>
+        </a>
+      </div>
+      <ul class="faq-spoilers" data-spoilers>
+        @@loop("ui/faq-spoilers-item.html", "json/faq-spoilers-item.json")
+      </ul>
+    </div>
+  </div>
+</section>

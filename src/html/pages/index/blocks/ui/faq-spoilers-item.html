@@ -1,0 +1,17 @@
+<li class="faq-spoilers__item @@if(active){spoiler-active}">
+  <h3 class="faq-spoilers__title">
+    <button class="faq-spoilers__button" data-spoiler="button">
+      <span class="faq-spoilers__label">Могу ли я забрать все имущество себе, если в браке работал только я?</span>
+      <span class="faq-spoilers__icon" aria-hidden="true">
+        <svg width="20" height="10">
+          <use xlink:href="#icon-down"></use>
+        </svg>
+      </span>
+    </button>
+  </h3>
+  <div class="faq-spoilers__region" data-spoiler="region" @@if(active===false){hidden}>
+    <p class="faq-spoilers__inner">
+      С начала карьеры отдала предпочтение специализации - защита прав детей.
+    </p>
+  </div>
+</li>
