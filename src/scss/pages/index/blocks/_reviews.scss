@@ -188,6 +188,7 @@
     inline-size: functions.responsive-value(55, 27);
     aspect-ratio: 1 / 1;
     font-size: 0;
+    background-color: variables.$color-image-background;
     border-radius: 50%;
 
     @media (min-width: #{768 + 0.1px}) {

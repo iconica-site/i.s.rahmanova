@@ -1,0 +1,38 @@
+<section class="feedback" aria-labelledby="title-feedback">
+  <div class="feedback__container container">
+    <div class="feedback__inner">
+      <div class="feedback__content">
+        <div class="feedback__header">
+          <h2 class="feedback__title feedback-title h2" id="title-feedback">
+            <span class="feedback-title__text feedback-title__text--desktop">Расскажите нам о своей проблеме</span>
+            <span class="feedback-title__text feedback-title__text--mobile">Расскажите о своей проблеме</span>
+          </h2>
+          <p class="feedback__text feedback-text">
+            <span class="feedback-text__item feedback-text__item--desktop">Мы свяжемся с вами в ближайшее время</span>
+            <span class="feedback-text__item feedback-text__item--mobile">Адвоткат свяжется с вами в ближайшее время</span>
+          </p>
+        </div>
+        <form class="feedback__form feedback-form" id="feedback-form" action="#">
+          <div class="feedback-form__inputs feedback-inputs">
+            <div class="feedback-inputs__item">
+              <label class="feedback-inputs__label" for="feedback-inputs-name">Имя</label>
+              <input class="feedback-inputs__input feedback-input" id="feedback-inputs-name" name="feedback-inputs-name" type="text" inputmode="text" placeholder="Имя">
+            </div>
+            <div class="feedback-inputs__item">
+              <label class="feedback-inputs__label" for="feedback-inputs-tel">Телефон</label>
+              <input class="feedback-inputs__input feedback-input" id="feedback-inputs-tel" name="feedback-inputs-tel" type="tel" inputmode="tel" placeholder="+7">
+            </div>
+          </div>
+          <div class="feedback-form__textarea feedback-textarea">
+            <label class="feedback-textarea__label" for="feedback-textarea-input">Сообщение</label>
+            <textarea class="feedback-textarea__input feedback-input" id="feedback-textarea-input" name="feedback-textarea-input"></textarea>
+          </div>
+          <button class="feedback-form__button" type="submit">Получить консультацию</button>
+        </form>
+      </div>
+      <div class="feedback__image ibg">
+        <img src="@img/images/ui/placeholder/1.svg" alt="" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
