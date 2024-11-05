@@ -1,0 +1,9 @@
+<section class="projects" aria-labelledby="title-projects">
+  <div class="projects__container container">
+    <h2 class="projects__title h2" id="title-projects">Наши проекты</h2>
+    <ul class="projects__items projects-items">
+      @@loop("ui/projects-item.html", "json/projects-item.json")
+    </ul>
+    <a class="projects__button" href="#">Смотреть все дела</a>
+  </div>
+</section>

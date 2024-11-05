@@ -1,0 +1,152 @@
+@use "../../../functions/functions";
+@use "../../../mixins/mixins";
+@use "../../../variables/variables";
+
+.projects {
+  padding-block: functions.responsive-value(92, 28) functions.responsive-value(120, 49);
+  background-color: variables.$color-section-background;
+
+  @media (min-width: #{768 + 0.1px}) {
+    padding-block: functions.responsive-value(92, 37, 1920, 780, "fixed-start-value", "px")
+      functions.responsive-value(120, 48, 1920, 780, "fixed-start-value", "px");
+  }
+
+  // .projects__container
+  &__container {
+    > *:last-child {
+      margin-block-end: 0;
+    }
+  }
+
+  // .projects__title
+  &__title {
+    margin-block-end: functions.responsive-value(99, 28);
+    text-align: center;
+
+    @media (min-width: #{768 + 0.1px}) {
+      margin-block-end: functions.responsive-value(99, 40, 1920, 780, "fixed-start-value", "px");
+    }
+  }
+
+  // .projects__items
+  &__items {
+    margin-block-end: functions.responsive-value(97, 36);
+
+    @media (min-width: #{768 + 0.1px}) {
+      margin-block-end: functions.responsive-value(97, 39, 1920, 780, "fixed-start-value", "px");
+    }
+  }
+
+  // .projects__button
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inline-size: 100%;
+    min-block-size: functions.responsive-value(69, 37);
+    margin-inline: auto;
+    padding-block: 5px;
+    padding-inline: 10px;
+    font-size: functions.responsive-value(22, 7);
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: center;
+    color: variables.$color-primary;
+    border: 1px solid variables.$color-secondary;
+
+    @include mixins.prefers-reduced-motion {
+      transition-property: color, background-color;
+      transition-duration: 0.3s;
+    }
+
+    @include mixins.hover {
+      color: variables.$color-white;
+      background-color: variables.$color-secondary;
+    }
+
+    @media (min-width: #{768 + 0.1px}) {
+      max-inline-size: 490px;
+      min-block-size: functions.responsive-value(69, 28, 1920, 780, "fixed-start-value", "px");
+      font-size: functions.responsive-value(22, 9, 1920, 780, "fixed-start-value", "px");
+    }
+  }
+}
+
+.projects-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: functions.responsive-value(40, 11);
+  column-gap: functions.responsive-value(31, 11);
+
+  @media (min-width: #{768 + 0.1px}) {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: functions.responsive-value(40, 16, 1920, 780, "fixed-start-value", "px");
+    column-gap: functions.responsive-value(31, 13, 1920, 780, "fixed-start-value", "px");
+  }
+
+  // .projects-items__item
+  &__item {
+  }
+}
+
+.projects-card {
+  display: flex;
+  flex-direction: column;
+  gap: functions.responsive-value(41, 14);
+  block-size: 100%;
+  padding-block: functions.responsive-value(26, 9) functions.responsive-value(68, 23);
+  padding-inline: functions.responsive-value(19, 7);
+  background-color: variables.$color-white;
+  border: 1px solid variables.$color-input;
+
+  @media (min-width: #{768 + 0.1px}) {
+    gap: functions.responsive-value(41, 17, 1920, 780, "fixed-start-value", "px");
+    padding-block: functions.responsive-value(26, 11, 1920, 780, "fixed-start-value", "px")
+      functions.responsive-value(68, 27, 1920, 780, "fixed-start-value", "px");
+    padding-inline: functions.responsive-value(19, 8, 1920, 780, "fixed-start-value", "px");
+  }
+
+  // .projects-card__title
+  &__title {
+    font-size: functions.responsive-value(11, 3);
+
+    @media (min-width: #{768 + 0.1px}) {
+      font-size: functions.responsive-value(11, 4, 1920, 780, "fixed-start-value", "px");
+    }
+  }
+
+  // .projects-card__text
+  &__text {
+    flex: 1 1 auto;
+    font-size: functions.responsive-value(18, 6);
+    letter-spacing: -0.04em;
+    color: variables.$color-primary;
+
+    @media (min-width: #{768 + 0.1px}) {
+      font-size: functions.responsive-value(18, 7, 1920, 780, "fixed-start-value", "px");
+    }
+  }
+
+  // .projects-card__link
+  &__link {
+    align-self: center;
+    font-size: functions.responsive-value(11, 4);
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: center;
+    color: variables.$color-secondary;
+
+    @include mixins.prefers-reduced-motion {
+      transition-property: color;
+      transition-duration: 0.3s;
+    }
+
+    @include mixins.hover {
+      color: variables.$color-text;
+    }
+
+    @media (min-width: #{768 + 0.1px}) {
+      font-size: functions.responsive-value(11, 4, 1920, 780, "fixed-start-value", "px");
+    }
+  }
+}
