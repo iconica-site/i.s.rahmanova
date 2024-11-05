@@ -86,6 +86,11 @@
 
   // .projects-items__item
   &__item {
+    &:not(:nth-child(-n + 4)) {
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
   }
 }
 

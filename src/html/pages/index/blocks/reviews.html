@@ -1,0 +1,21 @@
+<section class="reviews" id="section-reviews" aria-labelledby="title-reviews">
+  <div class="reviews__container container">
+    <div class="reviews__header reviews-header">
+      <div class="reviews-header__text">
+        <h2 class="reviews-header__caption caption" id="title-reviews">Отзывы</h2>
+        <p class="reviews-header__title h2">Что говорят наши<br>довольные клиенты</p>
+      </div>
+      <a class="reviews-header__button" href="#" aria-label="#">
+        <span class="reviews-header__icon ibg">
+          <img src="@img/icons/pages/index/reviews/1.png" alt="#" loading="lazy">
+        </span>
+      </a>
+    </div>
+    <div class="reviews__slider reviews-slider swiper">
+      <div class="reviews-slider__wrapper swiper-wrapper">
+        @@loop("ui/reviews-slide.html", "json/reviews-slide.json")
+      </div>
+    </div>
+    <a class="reviews__link" href="#">ЧИТАТЬ ВСЕ ОТЗЫВЫ</a>
+  </div>
+</section>
