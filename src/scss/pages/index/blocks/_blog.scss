@@ -33,7 +33,7 @@
     margin-block-end: functions.responsive-value(115, 71);
 
     @media (min-width: #{768 + 0.1px}) {
-      mask-border-repeat: functions.responsive-value(115, 46, 1920, 780, "fixed-start-value", "px");
+      margin-block-end: functions.responsive-value(115, 46, 1920, 780, "fixed-start-value", "px");
     }
 
     @media (max-width: 768px) {

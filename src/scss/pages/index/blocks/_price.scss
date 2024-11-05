@@ -6,7 +6,7 @@
   padding-block: functions.responsive-value(75, 14) functions.responsive-value(185, 35);
 
   @media (min-width: #{768 + 0.1px}) {
-    padding-block-end: functions.responsive-value(75, 30, 1920, 780, "fixed-start-value", "px")
+    padding-block: functions.responsive-value(75, 30, 1920, 780, "fixed-start-value", "px")
       functions.responsive-value(185, 75, 1920, 780, "fixed-start-value", "px");
   }
 
