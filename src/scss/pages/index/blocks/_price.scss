@@ -49,13 +49,10 @@
 
 .price-slider {
   padding-block: functions.responsive-value(5, 6);
+  overflow: visible;
 
   @media (min-width: #{768 + 0.1px}) {
     padding-block: functions.responsive-value(5, 3.5, 1920, 780, "fixed-start-value", "px");
-  }
-
-  @media (max-width: 768px) {
-    overflow: visible;
   }
 
   // .price-slider__wrapper
@@ -91,7 +88,7 @@
         inset-inline-start: -46.5px;
 
         @media (min-width: #{768 + 0.1px}) {
-          inset-inline-start: calc(-83 / 1920 * 100vw);
+          inset-inline-start: max(-83 / 1920 * 100vw, -83px);
         }
       }
 
@@ -99,7 +96,7 @@
         inset-inline-end: -46.5px;
 
         @media (min-width: #{768 + 0.1px}) {
-          inset-inline-end: calc(-83 / 1920 * 100vw);
+          inset-inline-end: max(-83 / 1920 * 100vw, -83px);
         }
       }
     }

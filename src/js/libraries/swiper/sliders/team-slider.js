@@ -1,6 +1,7 @@
 import Swiper from "swiper";
 import { Keyboard, } from "swiper/modules";
 
+const MIN_769 = matchMedia("(min-width: 768.1px)");
 const teamSlider = document.querySelector(".team-slider");
 
 if (teamSlider) {
@@ -13,7 +14,7 @@ if (teamSlider) {
     breakpoints: {
       "768.1": {
         slidesPerView: 3,
-        spaceBetween: 27 / 1920 * innerWidth,
+        spaceBetween: Math.min(27 / 1920 * innerWidth, 27),
         centeredSlides: false,
       },
     },
@@ -22,5 +23,13 @@ if (teamSlider) {
     rewind: true,
     centeredSlides: true,
     initialSlide: 1,
+  });
+
+  swiper.on("resize", (slider) => {
+    const { params } = slider;
+
+    if (MIN_769.matches) {
+      params.spaceBetween = Math.min(27 / 1920 * innerWidth, 27);
+    }
   });
 }

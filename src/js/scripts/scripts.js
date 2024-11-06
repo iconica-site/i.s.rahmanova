@@ -4,3 +4,4 @@ import "./scripts/goto.js";
 import "./scripts/dialogs.js";
 import "./scripts/spoilers.js";
 import "./scripts/blog-video.js";
+import "./scripts/map.js";

@@ -1,6 +1,7 @@
 import Swiper from "swiper";
 import { Keyboard, } from "swiper/modules";
 
+const MIN_769 = matchMedia("(min-width: 768.1px)");
 const priceSlider = document.querySelector(".price-slider");
 
 if (priceSlider) {
@@ -12,8 +13,7 @@ if (priceSlider) {
     },
     breakpoints: {
       "768.1": {
-
-        spaceBetween: 166 / 1920 * innerWidth,
+        spaceBetween: Math.min(166 / 1920 * innerWidth, 166),
         centeredSlides: false,
       },
     },
@@ -22,5 +22,13 @@ if (priceSlider) {
     rewind: true,
     centeredSlides: true,
     initialSlide: 1,
+  });
+
+  swiper.on("resize", (slider) => {
+    const { params } = slider;
+
+    if (MIN_769.matches) {
+      params.spaceBetween = Math.min(166 / 1920 * innerWidth, 166);
+    }
   });
 }

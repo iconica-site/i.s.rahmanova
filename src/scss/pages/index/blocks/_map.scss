@@ -29,6 +29,7 @@
     padding-block: functions.responsive-value(69, 57);
     overflow-x: hidden;
     overflow-y: auto;
+    pointer-events: none;
     scrollbar-width: none;
 
     @media (min-width: #{768 + 0.1px}) {
@@ -54,6 +55,7 @@
   padding-block: functions.responsive-value(16, 8) functions.responsive-value(76, 26);
   padding-inline: functions.responsive-value(20, 10);
   background-color: variables.$color-white;
+  pointer-events: all;
 
   @media (min-width: #{768 + 0.1px}) {
     max-inline-size: functions.responsive-value(584, 223, 1920, 780, "fixed-start-value", "px");

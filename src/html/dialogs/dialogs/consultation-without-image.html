@@ -1,0 +1,30 @@
+<dialog class="consultation" id="dialog-consultation-basic">
+  <div class="consultation__inner" data-dialog="inner">
+    <button class="consultation__close" data-dialog="close" aria-label="#">
+      <svg width="24" height="24" aria-hidden="true">
+        <use xlink:href="#icon-close"></use>
+      </svg>
+    </button>
+    <div class="consultation__content">
+      <div class="consultation__header">
+        <h2 class="consultation__title consultation__title--desktop">Получите бесплатную консультацию с оценкой перспектив вашего дела!</h2>
+        <h2 class="consultation__title consultation__title--mobile">Укажите контактные данные</h2>
+        <p class="consultation__caption">Оставьте заявку, адвокат перезвонит вам в течение дня.</p>
+      </div>
+      <form class="consultation__form consultation-form" id="consultation-form" action="#">
+        <div class="consultation-form__inputs consultation-inputs">
+          <div class="consultation-inputs__item">
+            <label class="consultation-inputs__label" for="consultation-inputs-name">Имя</label>
+            <input class="consultation-inputs__input" id="consultation-inputs-name" name="consultation-inputs-name" type="text" inputmode="text" placeholder="Имя">
+          </div>
+          <div class="consultation-inputs__item">
+            <label class="consultation-inputs__label" for="consultation-inputs-tel">Телефон</label>
+            <input class="consultation-inputs__input" id="consultation-inputs-tel" name="consultation-inputs-tel" type="tel" inputmode="tel" placeholder="+7">
+          </div>
+        </div>
+        <button class="consultation-form__button" type="submit">Получить консультацию</button>
+      </form>
+      <p class="consultation__text">Нажимая кнопку «Получить консультацию», вы автоматически соглашаетесь с политикой конфиденциальности и даете свое согласие на обработку персональных данных.</p>
+    </div>
+  </div>
+</dialog>
